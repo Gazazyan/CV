@@ -1,0 +1,152 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Emil A. \textsc{Gazazyan}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Yerevan, Armenia  | 06. Oct. 1981 \\
+    \textsc{Phone:}     & +374 (98) 315-828\\
+    \textsc{email:}     & \href{mailto:emilgazazyan@gmail.com}{emilgazazyan@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+  \textsc{Jan 2008- present}& Senior Researcher at \emph{Institute for Physical Research NAS RA}\\&\footnotesize{Spectroscopy, Quantum mechanics }\\\multicolumn{2}{c}{}
+ \\
+ \textsc{Dec 2014-present} & Lecturer at International Scientific-Education Center,Yerevan, Armenia, NAS RA \\&\footnotesize{MatLab, Parallel Computing, Curve Fitting, System Differentional Equation and integrals, GUI, Latex, Linux-ubuntu, MS Windows, MS Office and Office 365, }\\\multicolumn{2}{c}{} 
+ \\
+\textsc{Sep 2017-present} & Lecturer at  Russian-Armenia University, Yerevan, Armenia \\&\footnotesize{ MatLab, Simulink, Arduino, Physics, Latex}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{July} 2008 & PhD in Laser Physics, \textbf{Institute for Physical Research}, Ashtarak, Armenia\\
+
+\\&\\
+\textsc{July} 2005& Master's Degree in  \textsc{Radiophysics} \\&\normalsize\textbf{Yerevan State University}, Yerevan, Armenia\\
+\
+\\&\\
+\textsc{Sept} 1999& Bachelor's Degree in  \textsc{RadioPhysics},\\&\normalsize\textbf{Yerevan State University}, Yerevan, Armenia\\
+
+
+\end{tabular}
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+	Basic Knowledge:&  \textsc{html}, \textsc{Linux}, ubuntu, kubuntu,... \\
+	Intermediate Knowledge:& C++, Qt, MS Office and 365,MatLab, Octave {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+\end{tabular}
+
+
+\section{Interests and Activities}
+Technology, Open-Source, Programming\\
+Marketing, Finance\\
+\section{Languages}
+\begin{tabular}{rl}
+	\textsc{Armenian:}&Native\\
+	\textsc{Russian:}& Fluent\\
+	\textsc{English:}&Basic Knowledge\\
+\end{tabular}
+
+\section{Grant}
+\begin{tabular}{rl}	
+	\textsc{Dec} 2016 & Award: Young Scientists Support Program: Equipment
+	\\&\\
+	\textsc{Dec} 2015 & Double storage of optical information and other coherent processes in atomic and molecular media
+	\\&\\
+	\textsc{Oct} 2013&  NFSAT, YSSP-13-46
+	\\&\\
+	\textsc{Jun} 2012& Information processing in multilevel atomic system
+	\\&\\
+	\textsc{Jun} 2010& Optical information processing, driven by adiabatic interactions between light and matter.
+	\\&\\
+	\textsc{Mar} 2010& Effect of medium properties and spontaneus decay on coherent phenomena in laser-driven quantum system.
+	\\&\\
+	\textsc{Jan} 2008& ANSEF-optPS-1347
+	\\&\\
+	\textsc{Jan} 2007& INTAS 06-1000017-9234
+	\\&\\
+	\textsc{Sept} 2006& The National foundation of Science and Advanced Technologist (NFSAT), GRASP 25/06
+\end{tabular}
+
+
+
+
+\newpage
+
+
+\end{document}
